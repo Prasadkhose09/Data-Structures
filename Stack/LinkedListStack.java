@@ -54,12 +54,12 @@ public class LinkedListStack {
         stack.push(20);
         stack.push(30);
 
-        System.out.println(stack.peek()); // 30
+        System.out.println(stack.peek()); 
 
-        System.out.println(stack.pop()); // 30
-        System.out.println(stack.pop()); // 20
+        System.out.println(stack.pop());
+        System.out.println(stack.pop()); 
 
-        System.out.println(stack.size()); // 1
+        System.out.println(stack.size()); 
     }
 
 }
