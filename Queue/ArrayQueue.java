@@ -11,15 +11,15 @@ public class ArrayQueue {
 
     void enqueue(int val){
         if(size == cap ) throw new RuntimeException("Queue Full !");
-        rear = rear +1 %cap;
+        rear = (rear +1) %cap; // Makes it circular queue for simple just rear++;
         arr[rear] = val;
         size++;
     }
 
     int dequeue(){
-        if(size ==0) throw new RuntimeException("Queue Full !");
+        if(size ==0) throw new RuntimeException("Queue Empty !");
         int val = arr[front];
-        front = front +1 %cap;
+        front =( front +1 )%cap;  // for simple only front++,
         size--;
         return val;
     }
