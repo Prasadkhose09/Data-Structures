@@ -15,7 +15,7 @@ public class LinkedListQueue {
         Node node = new Node(val);
         if(rear == null) front = rear = node;
         else{
-            rear.next =node;
+            rear.next =node;  // fir Circular just do rear.next front;
             rear = node;
         }
         size++;
@@ -29,6 +29,33 @@ public class LinkedListQueue {
         size--;
         return data;
     }
+
+    /*
+    Dequeue for Circular queue
+
+    int dequeue(){
+
+    if(isEmpty())
+        throw new RuntimeException("Empty Queue!");
+
+    int data = front.val;
+
+    // Single node case
+    if(front == rear){
+        front = rear = null;
+    }
+
+    // Multiple nodes
+    else{
+        front = front.next;
+        rear.next = front;
+    }
+
+    size--;
+
+    return data;
+}
+    */
 
     boolean isEmpty(){return size==0;}
     int peek(){ return front.val;}
