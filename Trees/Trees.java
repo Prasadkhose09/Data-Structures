@@ -1,6 +1,6 @@
 package Trees;
 
-public class PreOrderBT {
+public class Trees {
     static class Node{
         int data;
         Node left, right;
